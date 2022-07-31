@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+#<h1>Hello {{personName}} from Python Flask!</h1>
+<form action="http://localhos:5000/hello_name" method='post'></form>
+<h1 style="text-align:center;font-size:30px;color:blueviolet;">Welcome!! The insertion completed successfully</h1>
+<div class="header-menue-section">
+    <p><a class="anchor-button" href="{{url_for('esrimap')}}"><strong>Home</strong></a></p>
+    <p><a class="anchor-button" href="{{url_for('login')}}"><strong>Login</strong></a></p>
+
+</div>
+{% endblock %}

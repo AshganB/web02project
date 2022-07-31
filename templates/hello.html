@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1 style='text-align: center;color:crimson;font-size:25px;' >Insert a new place</h1>
+
+{% for message in form.place.errors%}
+    <div>{{message}}</div>
+{%endfor%}
+{% for message in form.latitude.errors%}
+    <div>{{message}}</div>
+{%endfor%}
+
+<div class:"container">
+<form action="http://localhos:5000/hello_name" method='post'>
+      
+    {{form.hidden_tag()}}
+ 
+ 
+<div class="table-section">
+  <table>
+    <tr>
+        <td>{{form.place.label}}</td>
+        <td>{{form.place}}</td>
+
+    </tr>
+    <tr>
+        <td>{{form.latitude.label}}</td>
+        <td>{{form.latitude}}</td>
+    </tr>
+    <tr>
+        <td>{{form.longitude.label}}</td>
+        <td>{{form.longitude}}</td>
+    </tr>
+    <tr>
+        <td>{{form.submit(class="anchor-button")}}</td>
+    </tr>
+  </table>
+</div>
+
+</form>
+
+<!-- add btns accompanied with locations-->
+<div>
+    <h1>Choose a location</h1>
+    {% for location in locations%}
+    <p><a class="btn btn-primary btn-lg" href="{{location.key}}">{{location.name}}</a>{</p>
+    {% endfor %}
+</div>
+
+<!--drop down form-->
+<!-- Example single danger button -->
+<div class="btn-group">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Action
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

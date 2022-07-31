@@ -1,0 +1,42 @@
+body {
+    background-color: aliceblue;
+}
+.table-section{
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    padding: 20px;
+    display:inline-block;
+    font-size: 20px;
+    align-items: center;
+    background-color: azure;
+    text-align: center;
+    margin-left:580px ;
+    margin-top: 40px;
+}
+.anchor-button{
+    border:5px solid  coral;
+    border-radius: 5px;
+    padding:2px;
+    display:inline-block;
+    margin:10px;
+    font-size:25px;
+    background-color: burlywoood;
+}
+.header-menue-section{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+html,
+body,
+#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar li.nav-item {
+    color: #fff;    
+  }
